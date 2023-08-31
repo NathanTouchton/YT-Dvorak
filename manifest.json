@@ -2,12 +2,13 @@
     "manifest_version": 2,
     "name": "YT-Dvorak",
     "version": "1.0",
+    "permissions": ["activeTab"],
 
     "description": "Changes YouTube's keyboard shortcuts to work with the Dvorak layout.",
 
     "content_scripts": [
         {
-            "matches": ["*://*.youtube.com/*"],
+            "matches": ["*://*.youtube.com/*", "*://javascript.info/*"],
             "js": ["yt-dvorak.js"]
         }
     ]

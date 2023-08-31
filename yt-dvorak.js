@@ -1,9 +1,10 @@
+/// <reference path="./firefox.d.ts" />
 function convert() {
-    addEventListener("keydown", function (event) {
-        if (event.code == "H") {
-            var newEvent = new KeyboardEvent("keydown", { code: "J" });
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "h") {
+            event.preventDefault();
+            var newEvent = new KeyboardEvent("keydown", { key: "j" });
             document.dispatchEvent(newEvent);
         }
     });
 }
-convert();
