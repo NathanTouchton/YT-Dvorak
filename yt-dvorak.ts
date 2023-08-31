@@ -1,4 +1,4 @@
-function convert() {
+function convert(): void {
     addEventListener("keydown", (event: KeyboardEvent) => {
         if (event.code == "H") {
             const newEvent: Event = new KeyboardEvent("keydown", {code: "J"})
@@ -6,3 +6,5 @@ function convert() {
         }
     })
 }
+
+convert()
